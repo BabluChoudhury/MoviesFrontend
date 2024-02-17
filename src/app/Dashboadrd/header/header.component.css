@@ -1,0 +1,31 @@
+.b-redius{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: -0.5px;
+}
+.img-logo{
+    width: 350px;
+}
+.bg-blk{
+    background: #323232;
+}
+.nav-link{
+    border-right: 2px solid rgb(61, 61, 61);
+    padding: 0;
+}
+input,input:focus,::placeholder{
+    background-color: black;
+    color: white;
+}
+@media only screen and (max-width: 800px) {
+    .img-logo{
+        width: 250px;
+    }
+    .col-lg{
+       margin: 0;
+       padding: 0;
+    }
+    .mar-1{
+        margin-top: -1px;
+    }
+  }

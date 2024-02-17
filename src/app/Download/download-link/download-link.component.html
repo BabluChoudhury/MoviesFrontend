@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+    <div class="col-lg-10 bg-dark">
+        <div class="lead my-3">Due to copyright limitations, certain links may be inactive. Users are advised to
+            explore alternative sources for accessing desired content. It's crucial to respect intellectual property
+            rights and seek authorized channels to ensure legal access to copyrighted material while upholding legal
+            standards and ethical practices.</div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="h3 text-center text-warning">Download  Links</div>
+        <div class="list-group ">
+            <li class="list-group-item list-group-item text-break bg-dark" *ngFor="let items of moviesLinks"><a href={{items}} target="_blank">{{items}}</a></li>
+          </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,11 @@
+@media only screen and (max-width: 800px) {
+    .col-lg-9{
+        margin: 0;
+        padding: 0;
+    }
+    .row{
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+  }

@@ -1,0 +1,38 @@
+img {
+    height: 300px;
+}
+
+.card {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    min-height: 450px;
+}
+a{
+    text-decoration: none;
+}
+.card:hover {
+    transform: scale(0.9);
+}
+.pagination{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+ul li a{
+    background-color: black;
+    color: antiquewhite;
+    border: 1px solid rgb(28, 28, 28);
+}
+@media only screen and (max-width: 600px){
+    .container-md{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 600px){
+    .container-md{
+        margin: 0;
+        padding: 0;
+    }
+}

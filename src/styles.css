@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: black;
+    color: white;
+}
+.ngx-pagination{
+    font-size: 1.3em;
+}
+.ngx-pagination li:hover{
+    color: black;
+    }
+.ngx-pagination .disabled:hover,.ngx-pagination .current:hover{
+    color: white;
+}

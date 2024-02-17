@@ -1,0 +1,43 @@
+    <div class="row justify-content-center">
+        <div class="col-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-5">
+                <div class="container-fluid">
+                    <a routerLink="" class="navbar-brand">
+                        <img src="../../../assets/babul.png" class="img-logo">
+                    </a>
+                    <form class="d-flex ms-auto"  #search="ngForm" (submit)="searchData(search.value)">
+                        <input class="form-control me-2 px-5" type="search" placeholder="Search" ngModel name="name">
+                        <button class="btn btn-outline-success" type="submit"><fa-icon [icon]="faSearch" class="h4"></fa-icon></button>
+                    </form>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-blk b-redius mar-1">
+                <div class="container-fluid">
+                    <a routerLink="" class="navbar-brand"></a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mynav">
+                        <ul class="navbar-nav text-center">
+                            <li class="nav-item">
+                                <a routerLink="" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="" class="nav-link active">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="" class="nav-link active">BollyWood</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="" class="nav-link active">Web Seriese</a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="" class="nav-link active">HollyWood</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>

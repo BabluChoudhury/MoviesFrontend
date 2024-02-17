@@ -1,0 +1,29 @@
+<div class="container-md">
+    <app-header></app-header>  
+    <app-genere></app-genere>
+    <div class="row justify-content-center bg-dark">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-3 my-3" *ngFor="let item of movies | paginate: { itemsPerPage: pageSize, currentPage: currentPage, totalItems: totalItems }">
+                    <a routerLink="{{item.name}}">
+                        <div class="card">
+                            <img src={{item.imgUrl}} alt="movies" class="card-img-top">
+                            <div class="card-body">
+                                <p>{{item.title}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg">
+        <nav aria-label="Page navigation example">
+            <div class="row justify-content-center">
+                <pagination-controls (pageChange)="onPageChange($event)" class="pagination  bg-dark"></pagination-controls>
+            </div>
+        </nav>
+    </div>
+    
+    <router-outlet></router-outlet>
+  </div>

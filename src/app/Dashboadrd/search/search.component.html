@@ -1,0 +1,19 @@
+<div class="container-md">
+    <app-header></app-header>  
+    <div class="row justify-content-center bg-dark mt-5">
+        <div class="col-lg-12">
+            <div class="h1 text-secondary">Search Results for:{{val}}</div>
+            <div class="row">
+                <div class="col-lg-3 my-3" *ngFor="let item of movie ">
+                    <a (click)="toRedirect(item.name)">
+                        <div class="card">
+                            <img src={{item.imgUrl}} alt="movies" class="card-img-top">
+                            <div class="card-body">
+                                <p>{{item.title}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
