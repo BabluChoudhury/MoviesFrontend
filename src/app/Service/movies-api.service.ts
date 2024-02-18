@@ -9,6 +9,7 @@ export class MoviesApiService {
    getMovies(){
     return this.http.get("https://movies-backend-murex.vercel.app/v1/movies")
    }
+   
    getByName(name:any){
     return this.http.post("https://movies-backend-murex.vercel.app/v1/movie",name)
    }
