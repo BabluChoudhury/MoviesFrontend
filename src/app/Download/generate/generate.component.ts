@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class GenerateComponent implements OnInit{
   active=false
   click=false
-  count=1
+  count=15
   path=this.router.url  
   ngOnInit(): void {
     this.router.navigateByUrl(`${this.path}`)
@@ -25,7 +25,7 @@ constructor(private router:Router){}
       else{
         this.click=false
         this.active=true
-        this.count=1
+        this.count=15
       }
     },1000)
   }
