@@ -7,9 +7,9 @@ export class MoviesApiService {
 
   constructor(private http:HttpClient) { }
    getMovies(){
-    return this.http.get("https://movies-backend-rkdc-aio4fvrvk-bablu-choudhurys-projects.vercel.app/v1/movies")
+    return this.http.get("https://movies-backend-murex.vercel.app/v1/movies")
    }
    getByName(name:any){
-    return this.http.post("https://movies-backend-rkdc-aio4fvrvk-bablu-choudhurys-projects.vercel.app/v1/movie",name)
+    return this.http.post("https://movies-backend-murex.vercel.app/v1/movie",name)
    }
 }
