@@ -15,7 +15,7 @@ import { GenerateComponent } from './Download/generate/generate.component';
 import { DownloadLinkComponent } from './Download/download-link/download-link.component';
 import { SearchComponent } from './Dashboadrd/search/search.component';
 import { FormsModule } from '@angular/forms';
-
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 
 
 @NgModule({
@@ -36,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule,
     HttpClientModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    NgxUiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,4 +13,7 @@ export class MoviesApiService {
    getByName(name:any){
     return this.http.post("https://movies-backend-murex.vercel.app/v1/movie",name)
    }
+   getById(id:any){
+    return this.http.post("https://movies-backend-murex.vercel.app/v1/movieid",id)
+   }
 }

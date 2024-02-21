@@ -9,14 +9,16 @@ import { SearchComponent } from '../search/search.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  faSearch=faSearch
-  constructor(private router:Router,private searchComponent:SearchComponent){ }
-  searchData(data:any){
-    if(data.name ==="" || data.name === undefined || data.name === null){
+  faSearch = faSearch
+  constructor(private router: Router, private searchComponent: SearchComponent) { }
+  searchData(data: any) {
+    if (data.name === "" || data.name === undefined || data.name === null) {
       this.router.navigateByUrl("")
     }
-    else{
-    localStorage.setItem('search',data.name)
+    else {
+      const str: String = data.name;
+      const val = str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+      localStorage.setItem('search', val)
       this.router.navigateByUrl("/search")
       this.searchComponent.getMov()
     }

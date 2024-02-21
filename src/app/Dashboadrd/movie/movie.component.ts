@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { MoviesApiService } from 'src/app/Service/movies-api.service';
 
 @Injectable({
@@ -12,14 +13,15 @@ import { MoviesApiService } from 'src/app/Service/movies-api.service';
 })
 export class MovieComponent implements OnInit{
   movie:any
-  name:any
+  id:any
   year:any
   month:any
   date:any
   ngOnInit(): void {
-    this.name=this.route.snapshot.params['name']
-    const data={"name":this.name}
-    this.movieDetails.getByName(data).subscribe((result:any)=>{
+    this.loader.start()
+    this.id=localStorage.getItem('id')
+    const data={"_id":this.id}
+    this.movieDetails.getById(data).subscribe((result:any)=>{
         this.movie=result.result[0]
         const dd= new Date(result.result[0].date)
         this.year=dd.getFullYear()
@@ -29,7 +31,7 @@ export class MovieComponent implements OnInit{
         ]
         this.month=months[dd.getMonth()]
         this.date=dd.getDay()
-        console.log(this.movie.link2.address.gdrive.length);
+        this.loader.stop()
     })
     
   }
@@ -40,7 +42,7 @@ export class MovieComponent implements OnInit{
     localStorage.setItem('address',data)
   }
   
-  constructor(private route:ActivatedRoute ,private movieDetails:MoviesApiService){ }
+  constructor(private route:ActivatedRoute ,private movieDetails:MoviesApiService,private loader:NgxUiLoaderService){ }
 
   
 }
