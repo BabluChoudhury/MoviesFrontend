@@ -8,3 +8,8 @@ ul li{
 button{
     width: 200px;
 }
+@media only screen and (max-width: 600px){
+   .container-md{
+    font-size:xx-small;
+   }
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { MoviesApiService } from 'src/app/Service/movies-api.service';
 
 @Component({
@@ -10,8 +11,9 @@ import { MoviesApiService } from 'src/app/Service/movies-api.service';
 })
 export class DownloadLinkComponent implements OnInit {
   moviesLinks: any
-  constructor(private router: Router, private movieDetails: MoviesApiService) { }
+  constructor(private router: Router, private movieDetails: MoviesApiService,private loader:NgxUiLoaderService) { }
   ngOnInit(): void {
+    this.loader.start()
     const link = localStorage.getItem('link')
     const address = localStorage.getItem('address')
     const movie = decodeURIComponent((this.router.url).split("/")[1])
@@ -43,6 +45,7 @@ export class DownloadLinkComponent implements OnInit {
           this.moviesLinks = result.result[0].link3.address.dlinks
         }
       }
+      this.loader.stop()
     })
 
   }

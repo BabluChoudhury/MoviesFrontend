@@ -1,7 +1,7 @@
 <div class="container-md">
     <app-header></app-header>
 </div>
-<div class="container-md p-5 bg-dark mt-5 rounded-3" *ngIf="movie">
+<div class="container-md p-md-5 bg-dark mt-5 rounded-3" *ngIf="movie">
     <h3 class="text-secondary">{{movie.title}}</h3>
     <div class="lead">
         <p>{{movie.title}}. This is a {{movie.type}} {{movie.genre}} based movie. This movie is released in {{year}}
@@ -86,7 +86,7 @@
                 Hindi
                 ORG Full Movie {{movie.quality}} ~ {{movie.link2.pixel}} [{{movie.link2.size}}]</div>
             <div class="row justify-content-center" *ngIf="movie.link2.pixel">
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                    <a routerLink="getlink"> <button class="btn btn-success m-3" (click)="getMovie('link2'); getAddress('gdrive')" *ngIf="movie.link2.address.gdrive.length">G-Drive Links</button></a>
                     <a routerLink="getlink"><button class="btn btn-success m-3" (click)="getMovie('link2'); getAddress('dlinks')" *ngIf="movie.link2.address.dlinks.length">Download Links</button></a>
                 </div>
@@ -95,7 +95,7 @@
                 ORG
                 Full Movie {{movie.quality}} ~ {{movie.link3.pixel}} [{{movie.link3.size}}]</div>
             <div class="row justify-content-center" *ngIf="movie.link3.pixel">
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <a routerLink="getlink"> <button class="btn btn-success m-3"(click)="getMovie('link3')" *ngIf="movie.link3.address.gdrive.length">G-Drive Links</button></a>
                     <a routerLink="getlink"><button class="btn btn-success m-3"(click)="getMovie('link3')" *ngIf="movie.link3.address.dlinks.length">Download Links</button></a>
                 </div>
