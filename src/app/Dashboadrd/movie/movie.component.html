@@ -76,7 +76,11 @@
                 ORG Full Movie {{movie.quality}} ~ {{movie.link1.pixel}} [{{movie.link1.size}}]</div>
             <div class="row justify-content-center" *ngIf="movie.link1.pixel">
                 <div class="col-md-4 text-center">
+<<<<<<< HEAD
                     <a routerLink="getlink"><button
+=======
+                    <a href="https://dlinks.dailypotrika.xyz/view/fp60dmyNGj"><button
+>>>>>>> 0d76ad0bbc5e403a6e168d543d9269c3f8329b07
                             class="btn btn-success m-3" (click)="getMovie('link1')" *ngIf="movie.link2.address.gdrive.length">G-Drive Links</button></a>
 
                     <a routerLink="getlink"><button class="btn btn-success m-3" (click)="getMovie('link1')" *ngIf="movie.link1.address.dlinks.length">Download Links</button></a>
@@ -103,7 +107,11 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <div class="container-md bg-dark rounded">
     <app-footer></app-footer>
 </div>
 <router-outlet></router-outlet> 
+=======
+<router-outlet></router-outlet> 
+>>>>>>> 0d76ad0bbc5e403a6e168d543d9269c3f8329b07
