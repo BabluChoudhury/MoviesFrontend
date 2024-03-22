@@ -16,6 +16,10 @@ import { DownloadLinkComponent } from './Download/download-link/download-link.co
 import { SearchComponent } from './Dashboadrd/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { AboutComponent } from './Dashboadrd/about/about.component';
+import { DisclaimerComponent } from './Dashboadrd/disclaimer/disclaimer.component';
+import { DMCAComponent } from './Dashboadrd/dmca/dmca.component';
+import { ContactComponent } from './Dashboadrd/contact/contact.component';
 
 
 @NgModule({
@@ -29,6 +33,10 @@ import { NgxUiLoaderModule } from 'ngx-ui-loader';
     GenerateComponent,
     DownloadLinkComponent,
     SearchComponent,
+    AboutComponent,
+    DisclaimerComponent,
+    DMCAComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

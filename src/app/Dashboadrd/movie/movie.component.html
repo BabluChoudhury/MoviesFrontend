@@ -75,8 +75,8 @@
                 Hindi
                 ORG Full Movie {{movie.quality}} ~ {{movie.link1.pixel}} [{{movie.link1.size}}]</div>
             <div class="row justify-content-center" *ngIf="movie.link1.pixel">
-                <div class="col-md-4">
-                    <a href="https://dlinks.dailypotrika.xyz/view/fp60dmyNGj"><button
+                <div class="col-md-4 text-center">
+                    <a routerLink="getlink"><button
                             class="btn btn-success m-3" (click)="getMovie('link1')" *ngIf="movie.link2.address.gdrive.length">G-Drive Links</button></a>
 
                     <a routerLink="getlink"><button class="btn btn-success m-3" (click)="getMovie('link1')" *ngIf="movie.link1.address.dlinks.length">Download Links</button></a>
@@ -102,5 +102,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container-md bg-dark rounded">
+    <app-footer></app-footer>
 </div>
 <router-outlet></router-outlet> 

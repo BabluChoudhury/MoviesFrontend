@@ -1,0 +1,5 @@
+input,input:focus,::placeholder,.textarea{
+    background-color: rgb(76, 76, 76);
+    color: rgb(206, 204, 204);
+    border: none;
+}
